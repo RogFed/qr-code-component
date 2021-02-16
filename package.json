@@ -1,0 +1,7 @@
+{
+  "name": "base-react-node-docker",
+  "author": "Rogelio Delgado <rogelio@rogfed.ninja>",
+  "engines": {
+    "yarn": "2.4.x"
+  }
+}
