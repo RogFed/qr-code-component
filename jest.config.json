@@ -1,0 +1,11 @@
+{
+  "setupFiles": [
+    "<rootDir>/src/tests/setupTests.js"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "moduleNameMapper": {
+    "\\.(gif)$": "<rootDir>/src/tests/__mocks__/fileMock.js"
+  }
+}
