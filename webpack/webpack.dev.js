@@ -1,5 +1,5 @@
-const {merge} = require('webpack-merge')
-const common = require('../webpack.common')
+const { merge } = require('webpack-merge');
+const common = require('../webpack.common');
 const path = require('path');
 
 module.exports = merge(common, {
@@ -14,5 +14,13 @@ module.exports = merge(common, {
     liveReload: false,
     port: 8080,
     useLocalIp: true,
-  }
-})
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+});
