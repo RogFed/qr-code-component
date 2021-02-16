@@ -3,5 +3,8 @@
   "author": "Rogelio Delgado <rogelio@rogfed.ninja>",
   "engines": {
     "yarn": "2.4.x"
+  },
+  "dependencies": {
+    "webpack-merge": "^5.7.3"
   }
 }
