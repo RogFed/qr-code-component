@@ -1,14 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
 module.exports = {
   entry: './src/app.js',
-  output: {
-    path: path.resolve(__dirname, 'dist', 'assets'),
-    filename: '[name].bundle.js',
-    publicPath: '/assets/',
-  },
   module: {
     rules: [
       {
@@ -34,12 +25,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: '../index.html',
-      favicon: './src/favicon.png',
-    }),
-  ],
 };
