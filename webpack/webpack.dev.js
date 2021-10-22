@@ -18,7 +18,7 @@ module.exports = merge(common, {
     host: '0.0.0.0',
     hot: true,
     hotOnly: false,
-    port: 8080,
+    port: 3000,
     useLocalIp: true,
   },
   module: {
