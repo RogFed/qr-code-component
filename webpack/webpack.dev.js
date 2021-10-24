@@ -1,7 +1,6 @@
 const { merge } = require('webpack-merge');
 const common = require('../webpack.common');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   output: {
@@ -13,13 +12,14 @@ module.exports = merge(common, {
   devtool: 'eval-source-map',
   devServer: {
     compress: true,
-    contentBase: path.resolve(__dirname, '..', 'public'),
     historyApiFallback: true,
-    host: '0.0.0.0',
     hot: true,
-    hotOnly: false,
     port: 3000,
-    useLocalIp: true,
+    host: '0.0.0.0',
+    static: {
+      directory: path.join(__dirname, '..', 'public'),
+      publicPath: '/',
+    },
   },
   module: {
     rules: [
@@ -38,10 +38,4 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.png',
-    }),
-  ],
 });
