@@ -25,16 +25,8 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(s[ac]ss|css)$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
-        ],
+        // @ts-ignore
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

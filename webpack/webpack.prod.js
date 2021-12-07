@@ -16,14 +16,17 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(s[ac]ss|css)$/i,
+        // @ts-ignore
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
   plugins: [
+    // @ts-ignore
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
-    new CleanWebpackPlugin()
+    // @ts-ignore
+    new CleanWebpackPlugin(),
   ],
 });
