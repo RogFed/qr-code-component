@@ -1,21 +1,22 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app.tsx',
   module: {
     rules: [
       {
         test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-        },
+        use: 'html-loader',
       },
       {
         test: /\.m?js$/,
         exclude: '/node_modules/',
-        use: {
-          loader: 'babel-loader',
-        },
+        use: 'babel-loader',
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -26,6 +27,9 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
