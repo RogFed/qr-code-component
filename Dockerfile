@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:lts-alpine3.14
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json .
