@@ -1,0 +1,33 @@
+.Card {
+  max-width: calc(375px - 40px);
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 2em;
+  padding: 1.5em;
+
+  &__code {
+    border-radius: 1.3em;
+    overflow: hidden;
+    background: var(--qr-bg);
+    padding: 6em;
+  }
+
+  &__info {
+    text-align: center;
+    margin: 3em 0;
+    padding: 0 2rem;
+
+    & h2 {
+      font-size: var(--title-size);
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+    }
+
+    & p {
+      font-size: var(--paragraph-size);
+      font-weight: 400;
+      color: var(--greyish-blue);
+    }
+  }
+}
