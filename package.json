@@ -51,8 +51,8 @@
   },
   "scripts": {
     "start:dev": "webpack serve --config webpack/webpack.dev.js",
-    "dev:buildImage": "docker build . -t react-app-setup-image",
-    "dev:docker": "docker run -p 3000:3000 -d -v $(pwd)/src:/app/src:ro react-app-setup-image",
+    "dev:buildImage": "docker build . -t qr-code-component-image",
+    "dev:docker": "docker run -p 3000:3000 -d -v $(pwd)/src:/app/src:ro qr-code-component-image",
     "build": "webpack --config webpack/webpack.prod.js",
     "test:dev": "jest --config=jest.config.json --watch",
     "test": "jest --config=jest.config.json"

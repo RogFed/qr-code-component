@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
+
+import Card from './Card'
 
 const App = () => (
   <>
-    <h1>ReactJS App</h1>
+    <Card />
   </>
-);
+)
 
-export default App;
+export default App
